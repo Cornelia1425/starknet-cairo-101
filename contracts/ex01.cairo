@@ -4,14 +4,14 @@
 ## 使用一个简单的公开合约函数
 
 # In this exercice, you need to: 
-# 在这个练习中，你需要：
+# 在这个练习中，您需要：
 # - Use this contract's claim_points() function 
 # --使用本合约的claim_points()函数
 # - Your points are credited by the contract 
 # --由合约记入您的积分
 
 ## What you'll learn 
-## 你会学到什么
+## 您会学到什么
 # - General smart contract syntax 
 # --通用智能合约的语法
 # - Calling a function 
@@ -38,7 +38,7 @@ from contracts.utils.ex00_base import (
 
 
 ######### Constructor
-######### 构造函数
+######### 建构函数
 # This function is called when the contract is deployed 
 # 部署合约时呼叫该函数
 #
@@ -64,7 +64,7 @@ end
 # It takes one argument as a parameter (sender_address), which is a felt. Read more about felts here https://www.cairo-lang.org/docs/hello_cairo/intro.html#field-element
 # 它需要的输入是一个参数 (sender_address)，这是一个felt。在此处阅读有关felt的更多信息 https://www.cairo-lang.org/docs/hello_cairo/intro.html#field-element
 # It also has implicit arguments (syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr). Read more about implicit arguments here https://www.cairo-lang.org/docs/how_cairo_works/builtins.html
-# 它还包括隐含的参数参数（syscall_ptr：feel *、pedersen_ptr：HashBuiltin *、range_check_ptr）。在此处阅读有关隐含的参数的更多信息 https://www.cairo-lang.org/docs/how_cairo_works/builtins.html
+# 它还包括隐含的参数（syscall_ptr：feel *、pedersen_ptr：HashBuiltin *、range_check_ptr）。在此处阅读有关隐含的参数的更多信息 https://www.cairo-lang.org/docs/how_cairo_works/builtins.html
 
 @external
 func claim_points{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}():
