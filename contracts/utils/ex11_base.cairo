@@ -19,7 +19,7 @@ from starkware.starknet.common.syscalls import (get_contract_address)
 
 #
 # Declaring storage vars
-# 声明存储变量
+# 宣告存储变量
 # Storage vars are by default not visible through the ABI. They are similar to "private" variables in Solidity
 # 默认情况下，存储变量通过 ABI 是不可见的。 它们类似于 Solidity 中的“private”变量
 #
@@ -46,9 +46,9 @@ end
 
 #
 # Declaring getters
-# 声明 getters
+# 宣告 getters
 # Public variables should be declared explicitly with a getter
-# 公共变量应明确地用 getter 声明
+# 公共变量应明确地用 getter 宣告
 #
 
 @view
