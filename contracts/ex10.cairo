@@ -2,7 +2,7 @@
 ## Composability
 ## Composability可组合性
 # In this exercice, you need to:
-# 在这个练习中，你需要：
+# 在这个练习中，您需要：
 # - Use this contract to retrieve the address of contract ex10b.cairo, which holds the key to this exercice
 # - 使用此合约检索合约 ex10b.cairo 的地址，该合约持有此练习的密钥
 # - Find the secret key in ex10b.cairo
@@ -32,7 +32,7 @@ from contracts.utils.Iex10b import Iex10b
 
 #
 # Declaring storage vars
-# 声明存储变量
+# 宣告存储变量
 # Storage vars are by default not visible through the ABI. They are similar to "private" variables in Solidity
 # 默认情况下，存储变量通过 ABI 是不可见的。 它们类似于 Solidity 中的“private”变量
 #
@@ -43,7 +43,7 @@ end
 
 #
 # View functions
-# 只读函数
+# 唯读函数
 #
 @view
 func ex10b_address{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}() -> (ex10b_address: felt):
@@ -53,7 +53,7 @@ end
 
 #
 # Constructor
-# 构造函数
+# 建构函数
 #
 @constructor
 func constructor{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
