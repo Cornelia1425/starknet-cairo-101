@@ -2,7 +2,7 @@
 ## Composability
 ## 可组合性
 # This exercice was deployed as a complement to ex10, but you don't know where!
-# 这个练习是作为 ex10 的补充部署的，但你并不知道在哪里
+# 这个练习是作为 ex10 的补充部署的，但您并不知道在哪里
 # Use ex10 to find its address, then voyager to read from ex10b
 # 使用 ex10 找到它的地址，然后 voyager 从 ex10b 中读取
 # Then use ex10 to claim points
@@ -20,7 +20,7 @@ from contracts.utils.Iex10 import Iex10
 
 #
 # Declaring storage vars
-# 声明存储变量
+# 宣告存储变量
 # Storage vars are by default not visible through the ABI. They are similar to "private" variables in Solidity
 # 默认情况下，存储变量通过 ABI 是不可见的。 它们类似于 Solidity 中的“private”变量
 #
@@ -52,7 +52,7 @@ end
 
 #
 # Constructor
-# 构造函数
+# 建构函数
 #
 @constructor
 func constructor{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(ex10_address: felt):
