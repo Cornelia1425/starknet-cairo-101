@@ -2,7 +2,7 @@
 ## Recursions - basics
 ## 递归 - 基础
 # In this exercice, you need to:
-# 在这个练习中，你需要：
+# 在这个练习中，您需要：
 # - Use this contract's claim_points() function
 # - 使用这个合约的 claim_points() 函数
 # - Your points are credited by the contract
@@ -26,7 +26,7 @@ from contracts.utils.ex00_base import (
 
 #
 # Declaring storage vars
-# 声明存储变量
+# 宣告存储变量
 # Storage vars are by default not visible through the ABI. They are similar to "private" variables in Solidity
 # 默认情况下，存储变量通过 ABI 是不可见的。 它们类似于 Solidity 中的“private”变量
 #
@@ -38,9 +38,9 @@ end
 
 #
 # Declaring getters
-# 声明 getters
+# 宣告 getters
 # Public variables should be declared explicitly with a getter
-# 公共变量应明确地用 getter 声明
+# 公共变量应明确地用 getter 宣告
 #
 
 @view
@@ -51,7 +51,7 @@ end
 
 #
 # Constructor
-# 构造函数
+# 建构函数
 #
 @constructor
 func constructor{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
@@ -97,9 +97,9 @@ end
 # This function takes an array as a parameter
 # 该函数接收的参数为一个阵列
 # In order to pass it, the user needs to pass both the array and its length
-# 为了通过，用户需要传递阵列和它的长度
+# 为了通过该练习，用户需要提供阵列和它的长度
 # This complexity is abstracted away by voyager, where you simply need to pass an array
-# 操作被 voyager 简化了，你只需要在voyager中给它一个数组
+# 操作被 voyager 抽象掉了，您只需要在voyager中给它一个阵列
 @external
 func set_user_values{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(account: felt, array_len: felt, array: felt*):
 
@@ -117,9 +117,9 @@ func set_user_values_internal{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, 
     # This function is used recursively to set all the user values
     # 此函数用于递归地设置所有值
     # Recursively, we first go through the length of the array
-    #递归，我们先遍历阵列的长度
+    #递归，我们先遍历阵列
     # Once at the end of the array (length = 0), we start to rearrange the array
-    # 一旦在数组的末尾（长度 = 0），我们开始重新排列阵列
+    # 一旦在阵列的末尾（长度 = 0），我们开始重新排列阵列
     if length == 0:
         # Start with the end of the array.
         # 从阵列末尾开始
