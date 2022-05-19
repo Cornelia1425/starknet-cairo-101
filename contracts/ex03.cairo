@@ -11,9 +11,9 @@
 # - 合约记入您的积分
 
 ## What you'll learn
-## 你会学到：
+## 您会学到：
 # - How to declare mappings
-# - 如何声明映射
+# - 如何宣告映射
 # - How to read and write to mappings
 # - 如何读取和写入映射
 # - How to use a function to manipulate storage variables
@@ -41,26 +41,26 @@ from contracts.utils.ex00_base import (
 
 #
 # Declaring storage vars
-# 声明存储变量
+# 宣告存储变量
 # Storage vars are by default not visible through the ABI. They are similar to "private" variables in Solidity
 # 默认情况下，存储变量通过 ABI 是不可见的。 它们类似于 Solidity 中的“private”变量
 #
 
 # Declaring a mapping called user_counters_storage. For each 'account' key, which is a felt, we store a value which is a felt also.
-# 声明一个名为 user_counters_storage 的映射。 对于每个作为felt的“帐户”键，我们存储一个也是felt的值。
+# 宣告一个名为 user_counters_storage 的映射。 对于每个作为felt的“帐户”键，我们存储一个也是felt的值。
 @storage_var
 func user_counters_storage(account: felt) -> (user_counters_storage: felt):
 end
 
 #
 # Declaring getters
-# 声明 getters
+# 宣告 getters
 # Public variables should be declared explicitly with a getter
-# 公共变量应明确地用 getter 声明
+# 公共变量应明确地用 getter 宣告
 #
 
 # Declaring a getter for our mappings. It takes one argument as a parameter, the account you wish to read the counter of
-# 为我们的映射声明一个 getter。 它将一个argument作为参数，即您希望读取计数器的值的帐户
+# 为我们的映射宣告一个 getter。 它将一个argument作为参数，即您希望读取计数器的值的帐户
 @view
 func user_counters{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(account: felt) -> (user_counter: felt):
     let (user_counter) = user_counters_storage.read(account)
@@ -69,7 +69,7 @@ end
 
 #
 # Constructor
-# 构造函数
+# 建构函数
 #
 @constructor
 func constructor{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
@@ -137,7 +137,7 @@ func decrement_counter{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_c
     # 读取呼叫者的地址
     let (sender_address) = get_caller_address()
     # Reading counter from storage
-    # R从存储中读取计数器的值
+    # 从存储中读取计数器的值
     let (current_counter_value) = user_counters_storage.read(sender_address)
     # Writing updated value to storage
     # 将更新的值写入存储
