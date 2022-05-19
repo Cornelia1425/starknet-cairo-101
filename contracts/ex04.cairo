@@ -2,13 +2,13 @@
 # Reading a mapping
 # 读取映射
 # In this exercise, you need to:
-# 在这个练习中，你需要：
+# 在这个练习中，您需要：
 # - Use a function to read a variable
-# - U使用函数读取变量
+# - 使用函数读取变量
 # - Use a function to read a value in a mapping, where the slot you read is the value from the first call
 # - 使用函数读取映射中的值，其中您读取的slot是第一次调用的值
 # - Use a function to show you know the correct value of the value in the mapping
-# - 使用函数显示你知道映射中值的正确值
+# - 使用函数显示您知道映射中值的正确值
 # - Your points are credited by the contract
 # - 由合约记入您的积分
 
@@ -31,7 +31,7 @@ from contracts.utils.ex00_base import (
 
 #
 # Declaring storage vars
-# 声明存储变量
+# 宣告存储变量
 # Storage vars are by default not visible through the ABI. They are similar to "private" variables in Solidity
 # 默认情况下，存储变量通过 ABI 是不可见的。 它们类似于 Solidity 中的“private”变量
 #
@@ -55,9 +55,9 @@ end
 
 #
 # Declaring getters
-# 声明 getters
+# 宣告 getters
 # Public variables should be declared explicitly with a getter
-# 公共变量应明确地用 getter 声明
+# 公共变量应明确地用 getter 宣告
 #
 
 @view
@@ -74,7 +74,7 @@ end
 
 #
 # Constructor
-# 构造函数
+# 建构函数
 #
 @constructor
 func constructor{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
