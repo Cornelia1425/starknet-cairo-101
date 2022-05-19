@@ -2,7 +2,7 @@
 ## Recursions - advanced
 ## 递归 - 高级
 # In this exercice, you need to:
-# 在这个练习中，你需要：
+# 在这个练习中，您需要：
 # - Use this contract's claim_points() function
 # - 使用这个合约的 claim_points() 函数
 # - Your points are credited by the contract
@@ -26,7 +26,7 @@ from contracts.utils.ex00_base import (
 
 #
 # View functions
-# 只读函数
+# 唯读函数
 #
 @view
 func get_sum{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(array_len: felt, array: felt*) -> (array_sum: felt):
@@ -36,7 +36,7 @@ end
 
 #
 # Constructor
-# 构造函数
+# 建构函数
 #
 @constructor
 func constructor{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
@@ -63,7 +63,7 @@ func claim_points{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_
     assert_le(4, array_len)
 
     # Calculating the sum of the array sent by the user
-    # 计算用户发送的阵列的总和
+    # 计算用户提供的阵列的总和
     let (array_sum) = get_sum_internal(array_len, array)
 
     # The sum should be higher than 50
@@ -91,7 +91,7 @@ func get_sum_internal{ range_check_ptr}(length : felt, array : felt*) -> (sum : 
     # This function is used recursively to calculate the sum of all the values in an array
     # 该函数用于递归计算阵列中所有值的总和
     # Recursively, we first go through the length of the array
-    # 递归，我们先遍历阵列的长度
+    # 递归，我们先遍历阵列
     # Once at the end of the array (length = 0), we start summing
     # 一旦在数组的末尾（长度 = 0），我们开始求和
     if length == 0:
@@ -107,7 +107,7 @@ func get_sum_internal{ range_check_ptr}(length : felt, array : felt*) -> (sum : 
     # This part of the function is first reached when length=0.
     # 在length=0时，首次调用这部分函数
     # Checking that the first value in the array ([array]) is not 0
-    # 检查array ([array]) 中的第一个值是否不为 0
+    # 检查阵列 ([array]) 中的第一个值是否不为 0
     assert_not_zero([array])
     # The sum begins
     # 开始求和
