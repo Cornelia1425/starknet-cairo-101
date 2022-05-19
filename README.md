@@ -1,6 +1,7 @@
 # StarkNet Cairo 101
 **Get started with Cairo with this simple tutorial. 
 Complete the puzzles/exercises, get tokens and learn about StarkNet smart contracts!**
+**A mandarin version is available 中文版本请查看这里[here](https://…) **
 ​
 ## Introduction
 ### Disclaimer
