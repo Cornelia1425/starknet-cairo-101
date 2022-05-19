@@ -6,7 +6,7 @@
 # - Use a function to get assigned a private variable
 # - 使用一个函数来分配一个私有变量
 # - Use a function to emit event with the value of the private variable
-# - 使用函数，发送包含私有变量的值的事件event
+# - 使用函数，发送包含私有变量的值的事件
 # - Your points are credited by the contract
 # - 由合约记入您的积分
 
@@ -133,7 +133,7 @@ func assign_user_slot{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_ch
     let (user_slot) = user_slots_storage.read(sender_address)
     let (secret_value) = values_mapped_secret_storage.read(user_slot)
     # Emit an event with secret value
-    # 发出含有秘密值的event
+    # 发出含有秘密值的事件
     assign_user_slot_called.emit(sender_address, secret_value+32)
     return()
 end
