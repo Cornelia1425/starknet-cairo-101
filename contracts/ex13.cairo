@@ -2,7 +2,7 @@
 # Privacy
 # 隐私
 # The terminology "Zero knowldge" can be confusing. Devs tend to assume things are private on Zk Rollups.
-# 术语“零知识”可能会令人困惑。 开发者倾向于假设 Zk Rollups 上的活动是私有/不公开的。
+# “零知识”这个用词可能会令人困惑。 开发者倾向于假设 Zk Rollups 上的活动是私有/不公开的。
 # They are not. They can be; but they are not by default.
 # 但其实不是。 它们可以是不公开的; 但默认情况下它们不是私密的。
 # In this exercice, you need to:
@@ -28,7 +28,7 @@ from contracts.utils.ex00_base import (
 
 #
 # Declaring storage vars
-# 声明存储变量
+# 宣告存储变量
 # Storage vars are by default not visible through the ABI. They are similar to "private" variables in Solidity
 # 默认情况下，存储变量通过 ABI 是不可见的。 它们类似于 Solidity 中的“private”变量
 #
@@ -55,9 +55,9 @@ end
 
 #
 # Declaring getters
-# 声明 getters
+# 宣告 getters
 # Public variables should be declared explicitly with a getter
-# 公共变量应明确地用 getter 声明
+# 公共变量应明确地用 getter 宣告
 #
 
 @view
@@ -70,7 +70,7 @@ end
 
 #
 # Constructor
-# 构造函数
+# 建构函数
 #
 @constructor
 func constructor{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
