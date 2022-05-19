@@ -1,5 +1,6 @@
 ######### Ex 00
 ## A contract from which other contracts can import functions
+## 一个可被其他合约导入函数的合约
 
 %lang starknet
 
@@ -13,7 +14,9 @@ from starkware.cairo.common.math import assert_not_zero
 from starkware.starknet.common.syscalls import (get_contract_address)
 #
 # Declaring storage vars
+# 声明存储变量
 # Storage vars are by default not visible through the ABI. They are similar to "private" variables in Solidity
+# 默认情况下，存储变量通过 ABI 是不可见的。 它们类似于 Solidity 中的“private”变量
 #
 
 @storage_var
@@ -33,7 +36,9 @@ func exercise_id_storage() -> (exercise_id_storage : felt):
 end
 #
 # Declaring getters
-# Public variables should be declared explicitely with a getter
+# 声明 getters
+# Public variables should be declared explicitly with a getter
+# 公共变量应明确地用 getter 声明
 #
 
 @view
@@ -64,17 +69,21 @@ end
 @view
 func has_validated_exercise{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(account: felt) -> (has_validated_exercice: felt):
     # reading player registry
+    # 读取玩家的注册号registry
 	let (_players_registry) = players_registry_storage.read()
 	let (_workshop_id) = workshop_id_storage.read()
 	let (_exercise_id) = exercise_id_storage.read()
 	# Checking if the user already validated this exercice
+    # 检查用户是否已经验证了这个练习
 	let (has_current_user_validated_exercice) = Iplayers_registry.has_validated_exercice(contract_address=_players_registry, account=account, workshop=_workshop_id, exercise = _exercise_id)
     return (has_current_user_validated_exercice)
 end
 
 #
 # Internal constructor
+# 内部构造函数
 # This function is used to initialize the contract. It can be called from the constructor
+# 该函数用于初始化合约。 可以从构造函数中呼叫
 #
 
 func ex_initializer{
@@ -96,18 +105,25 @@ end
 
 #
 # Internal functions
+# 内部函数
 # These functions can not be called directly by a transaction
+# 这些函数不能被交易直接调用
 # Similar to internal functions in Solidity
+# 类似于 Solidity 中的内部函数
 #
 
 func distribute_points{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(to: felt, amount: felt):
 	
 	# Converting felt to uint256. We assume it's a small number 
+    # 将felt转换为 uint256。 我们假设这是一个较小的数字
 	# We also add the required number of decimals
+	# 我们还添加了所需的小数点位数
 	let points_to_credit: Uint256 = Uint256(amount*1000000000000000000, 0)
 	# Retrieving contract address from storage
+    # 从存储中检索合约地址
 	let (contract_address) = tderc20_address_storage.read()
 	# Calling the ERC20 contract to distribute points
+    # 调用ERC20合约分配积分
 	ITDERC20.distribute_points(contract_address=contract_address, to = to, amount = points_to_credit)
 	return()
 end
@@ -115,14 +131,17 @@ end
 
 func validate_exercise{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(account: felt):
 	# reading player registry
+    # 读取玩家注册号 registry
 	let (_players_registry) = players_registry_storage.read()
 	let (_workshop_id) = workshop_id_storage.read()
 	let (_exercise_id) = exercise_id_storage.read()
 	# Checking if the user already validated this exercice
+    # 检查用户是否已经验证了这个练习
 	let (has_current_user_validated_exercice) = Iplayers_registry.has_validated_exercice(contract_address=_players_registry, account=account, workshop=_workshop_id, exercise = _exercise_id)
 	assert (has_current_user_validated_exercice) = 0
 
 	# Marking the exercice as completed
+    # 标记练习已完成
 	Iplayers_registry.validate_exercice(contract_address=_players_registry, account=account, workshop=_workshop_id, exercise = _exercise_id)
 	
 
