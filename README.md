@@ -91,20 +91,20 @@ StarkNet 仍处于 Alpha 阶段，这意味着它仍在持续开发中。目前�
 ### 合约地址
 |Topic 题目|Contract code 合约代码|Contract on voyager 合约链接|
 |---|---|---|
-|积分计数器ERC20|[Points counter ERC20](contracts/token/TDERC20.cairo)|[Link](https://goerli.voyager.online/contract/0x074002c7df47096f490a1a89b086b8a468f2e7c686e04a024d93b7c59f934f83)|
-|General syntax|[Ex01](contracts/ex01.cairo)|[Link](https://goerli.voyager.online/contract/0x04b9b3cea3d4b21f7f272a26cf0d54f40348a9d8509f951b217e33d4e9c80af2)|
-|Storage variables, getters, asserts|[Ex02](contracts/ex02.cairo)|[Link](https://goerli.voyager.online/contract/0x06511a41c0620d756ff9e3c6b27d5aea2d9b65e162abdec72c4d746c0a1aca05)|
-|Reading and writing storage variables|[Ex03](contracts/ex03.cairo)|[Link](https://goerli.voyager.online/contract/0x044a68c9052a5208a46aee5d0af6f6a3e30686ab9ce3e852c4b817d0a76f2f09)|
-|Mappings|[Ex04](contracts/ex04.cairo)|[Link](https://goerli.voyager.online/contract/0x04e701814214c5d82215a134c31029986b0d05a2592c0c977fe2330263dc7304)|
-|Variable visibility|[Ex05](contracts/ex05.cairo)|[Link](https://goerli.voyager.online/contract/0x01e7285636d7d147df6e2eacb044611e13ce79048c4ac21d0209c8c923108975)|
-|Events|[Ex12](contracts/ex12.cairo)|[Link](https://goerli.voyager.online/contract/0x0658e159d61d4428b6d5fa90aa20083786674c49a645fe416fc4c35b145f8a83)|
-|Functions visibility|[Ex06](contracts/ex06.cairo)|[Link](https://goerli.voyager.online/contract/0x02abaa69541bd4630225cd69fa87d08a6e8fb80f4c7c2e8d3568fa59e71eec26)|
-|Comparing values|[Ex07](contracts/ex07.cairo)|[Link](https://goerli.voyager.online/contract/0x07d9f4f818592b7a97f2c7e5915733ed022f96313cb61bde2c27a9fbd729a5a4)|
-|Recursions level 1|[Ex08](contracts/ex08.cairo)|[Link](https://goerli.voyager.online/contract/0x072d42eb599c9ec14d1f7209223226cb1436898c6930480c6a2f6998c6ceb9fe)|
-|Recursions level 2|[Ex09](contracts/ex09.cairo)|[Link](https://goerli.voyager.online/contract/0x035203b6c0b68ef87127a7d77f36de4279ceb79ea2d8099f854f51fc28074de4)|
-|Composability|[Ex10](contracts/ex10.cairo)|[Link](https://goerli.voyager.online/contract/0x071e59fbd7e724b94ad1f6d4bba1ff7161a834c6b19c4b88719ad640d5a6105c)|
-|Importing functions|[Ex11](contracts/ex11.cairo)|[Link](https://goerli.voyager.online/contract/0x06e124eba8dcf1ebe207d6adb366193511373801b49742b39ace5c868b795e68)|
-|Privacy on StarkNet|[Ex13](contracts/ex13.cairo)|[Link](https://goerli.voyager.online/contract/0x07b271402ce18e1bcc1b64f555cdc23693b0eb091d71644f72b6c220814c1425)|
+|Points counter 积分计数器ERC20|[Points counter ERC20](contracts/token/TDERC20.cairo)|[Link](https://goerli.voyager.online/contract/0x074002c7df47096f490a1a89b086b8a468f2e7c686e04a024d93b7c59f934f83)|
+|General syntax 基本语法|[Ex01](contracts/ex01.cairo)|[Link](https://goerli.voyager.online/contract/0x04b9b3cea3d4b21f7f272a26cf0d54f40348a9d8509f951b217e33d4e9c80af2)|
+|Storage variables, getters, asserts 存储变量，getters, 断言|[Ex02](contracts/ex02.cairo)|[Link](https://goerli.voyager.online/contract/0x06511a41c0620d756ff9e3c6b27d5aea2d9b65e162abdec72c4d746c0a1aca05)|
+|Reading and writing storage variables 读写存储变量|[Ex03](contracts/ex03.cairo)|[Link](https://goerli.voyager.online/contract/0x044a68c9052a5208a46aee5d0af6f6a3e30686ab9ce3e852c4b817d0a76f2f09)|
+|Mappings 映射|[Ex04](contracts/ex04.cairo)|[Link](https://goerli.voyager.online/contract/0x04e701814214c5d82215a134c31029986b0d05a2592c0c977fe2330263dc7304)|
+|Variable visibility 变量可见度|[Ex05](contracts/ex05.cairo)|[Link](https://goerli.voyager.online/contract/0x01e7285636d7d147df6e2eacb044611e13ce79048c4ac21d0209c8c923108975)|
+|Events 事件|[Ex12](contracts/ex12.cairo)|[Link](https://goerli.voyager.online/contract/0x0658e159d61d4428b6d5fa90aa20083786674c49a645fe416fc4c35b145f8a83)|
+|Functions visibility 函数可见度|[Ex06](contracts/ex06.cairo)|[Link](https://goerli.voyager.online/contract/0x02abaa69541bd4630225cd69fa87d08a6e8fb80f4c7c2e8d3568fa59e71eec26)|
+|Comparing values 比较值|[Ex07](contracts/ex07.cairo)|[Link](https://goerli.voyager.online/contract/0x07d9f4f818592b7a97f2c7e5915733ed022f96313cb61bde2c27a9fbd729a5a4)|
+|Recursions level 1 递归 1|[Ex08](contracts/ex08.cairo)|[Link](https://goerli.voyager.online/contract/0x072d42eb599c9ec14d1f7209223226cb1436898c6930480c6a2f6998c6ceb9fe)|
+|Recursions level 2 递归 2|[Ex09](contracts/ex09.cairo)|[Link](https://goerli.voyager.online/contract/0x035203b6c0b68ef87127a7d77f36de4279ceb79ea2d8099f854f51fc28074de4)|
+|Composability 可组合性|[Ex10](contracts/ex10.cairo)|[Link](https://goerli.voyager.online/contract/0x071e59fbd7e724b94ad1f6d4bba1ff7161a834c6b19c4b88719ad640d5a6105c)|
+|Importing functions 导入函数|[Ex11](contracts/ex11.cairo)|[Link](https://goerli.voyager.online/contract/0x06e124eba8dcf1ebe207d6adb366193511373801b49742b39ace5c868b795e68)|
+|Privacy on StarkNet StarkNet上的隐私|[Ex13](contracts/ex13.cairo)|[Link](https://goerli.voyager.online/contract/0x07b271402ce18e1bcc1b64f555cdc23693b0eb091d71644f72b6c220814c1425)|
 
 ​
 ​
