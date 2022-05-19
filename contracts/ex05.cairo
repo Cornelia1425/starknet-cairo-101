@@ -1,14 +1,14 @@
 ######### Ex 05
 # Public/private variables
-# P公共/私有变量
+# 公共/私有变量
 # In this exercice, you need to:
-# 在这个练习中，你需要：
+# 在这个练习中，您需要：
 # - Use a function to get assigned a private variable
 # - 使用一个函数来分配一个私有变量
 # - Use a function to duplicate this variable in a public variable
 # - 使用函数在公共变量中复制此变量
 # - Use a function to show you know the correct value of the private variable
-# - 使用函数显示你知道私有变量的正确值
+# - 使用函数显示您知道私有变量的正确值
 # - Your points are credited by the contract
 # - 由合约记入您的积分
 
@@ -29,13 +29,13 @@ from contracts.utils.ex00_base import (
 
 #
 # Declaring storage vars
-# 声明存储变量
+# 宣告存储变量
 # Storage vars are by default not visible through the ABI. They are similar to "private" variables in Solidity
 # 默认情况下，存储变量通过 ABI 是不可见的。 它们类似于 Solidity 中的“private”变量
 #
 
 # You will need to read values in these storage slots. But not all of them have getters!
-# 您将需要读取这些存储槽中的值。 但并非所有人都有getters！
+# 您将需要读取这些存储槽中的值。 但并非所有存储都有getters！
 
 @storage_var
 func user_slots_storage(account: felt) -> (user_slots_storage: felt):
@@ -60,9 +60,9 @@ end
 
 #
 # Declaring getters
-# 声明 getters
+# 宣告 getters
 # Public variables should be declared explicitly with a getter
-# 公共变量应明确地用 getter 声明
+# 公共变量应明确地用 getter 宣告
 #
 
 @view
@@ -80,7 +80,7 @@ end
 
 #
 # Constructor
-# 构造函数
+# 建构函数
 #
 @constructor
 func constructor{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
@@ -111,7 +111,7 @@ func claim_points{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_
     # Checking that the value provided by the user is the one we expect
     # 检查用户提供的值是否是我们期望的值
     # Still sneaky.
-    # 皮一下！
+    # 再皮一下！
     let (value) = values_mapped_secret_storage.read(user_slot)
     assert value = expected_value + 23
 
