@@ -2,7 +2,7 @@
 ## Understanding functions to compare values
 ## 理解函数来比较值的大小
 # In this exercice, you need to:
-# 在这个练习中，你需要：
+# 在这个练习中，您需要：
 # - Use this contract's claim_points() function 
 # - 使用这个合约的 claim_points() 函数
 # - Your points are credited by the contract
@@ -40,7 +40,7 @@ from contracts.utils.ex00_base import (
 
 #
 # Constructor
-# 构造函数
+# 构建函数
 #
 @constructor
 func constructor{syscall_ptr : felt*, pedersen_ptr : HashBuiltin*, range_check_ptr}(
